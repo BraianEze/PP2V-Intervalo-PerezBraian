@@ -82,8 +82,50 @@ nav ul li a {
 
 
 /* Estilo para el pie de página */
+/* Estilo para el footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a una nueva fila si no caben en el ancho de la pantalla */
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
 }
+
+/* Estilo para la sección de contacto */
+#contacto {
+    flex: 1; /* Toma el 50% del ancho disponible */
+}
+
+/* Estilo para la sección de horarios */
+#horarios {
+    flex: 1; /* Toma el 50% del ancho disponible */
+    margin-left: 20px; /* Espacio entre el contenido y la tabla de horarios */
+}
+
+/* Estilo para la tabla de horarios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Espacio entre el título "Horarios" y la tabla */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las filas impares de la tabla */
+tr:nth-child(odd) {
+    background-color: #e5e5e5;
+}
+
+

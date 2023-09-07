@@ -1,0 +1,89 @@
+/* Estilo para la sección de inicio */
+#inicio {
+    position: relative;
+    text-align: center;
+}
+
+/* Estilo para la imagen de inicio */
+.inicio-content img {
+    width: 100%;
+}
+
+/* Estilo para el texto superpuesto */
+.texto-superpuesto {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: white;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de las secciones */
+section {
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #e1f733;
+    color: #fff;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-content img {
+    margin-right: 10px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text p {
+    margin: 0;
+}
+
+
+/* Estilo para el menú de navegación */
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}

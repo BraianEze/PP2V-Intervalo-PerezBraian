@@ -12,32 +12,37 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <a href="#inicio"><img class="logo" src="resources\images-gym\intervaloLogo2.png"></a>
-            <div class="header-text">
-                <p>CENTRO DE ACTIVIDADES FISICAS <br>Y PREPARACIÓN DEPORTIVA </p>
-            </div>
-            <div class="menu">
-                <div class="menu-links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#instalaciones">Instalaciones</a>
-                    <a href="#clases">Clases</a>
-                    <a href="#contacto">Contacto</a>
+        <header>
+            <div class="container">
+                <div class="nav">
+                    <input type="checkbox" id="nav-check">
+                    <div class="nav-header">
+                    <div class="nav-title">
+                        <a href="#"> <img src="resources\images-gym\Logo-Intervalo.png" style="height: 500; width: 120px;" alt=""></a>
+                    </div>
+                    </div>
+                    <div class="nav-btn">
+                    <label for="nav-check">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#" >Inicio</a>
+                        <a href="#clases" >Clases</a>
+                        <a href="#instalaciones">Instalaciones</a>
+                        <a href="#contacto" >Contacto</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="menu-btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-        </div>
-    </header>
+        </header>
 
     <main>
         <!-- Sección de inicio -->
         <section id="inicio">
             <div class="inicio-content">
-                <img class="inicio-image" src="resources\intervalo recursos\1.jpg" alt="Imagen de Inicio">
+                <img class="inicio-image" src="resources\intervalo recursos\a.jpg" alt="Imagen de Inicio">
                 <div class="texto-superpuesto">
                     <h2>Bienvenido al Gimnasio Intérvalo</h2>
                     <p>En Intérvalo, nos dedicamos a tu bienestar y salud. Ofrecemos una amplia gama de servicios y equipos para ayudarte a alcanzar tus metas de fitness y sentirte mejor que nunca. Nuestro equipo de entrenadores profesionales está listo para ayudarte en cada paso del camino.</p>
@@ -60,19 +65,18 @@
             </div>
         </section>
 
-
         <!-- Sección de instalaciones -->
-<section id="instalaciones">
-    <h2>Nuestras Instalaciones</h2>
-        <div class="galeria-instalaciones">
-            <img class="imagen-instalaciones" src="resources\intervalo recursos\a.jpg" alt="">
-            <img class="imagen-instalaciones" src="resources\intervalo recursos\b.jpg" alt="">
-            <img class="imagen-instalaciones" src="resources\intervalo recursos\c.jpg" alt="">
-            <img class="imagen-instalaciones" src="resources\intervalo recursos\d.jpg" alt="">
-            <img class="imagen-instalaciones" src="resources\intervalo recursos\e.jpg" alt="">
-            <img class="imagen-instalaciones" src="resources\intervalo recursos\f.jpg" alt="">
-    </div>
-</section>
+        <section id="instalaciones">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="galeria-instalaciones">
+                <img class="imagen-instalaciones" src="resources\intervalo recursos\a.jpg" alt="">
+                <img class="imagen-instalaciones" src="resources\intervalo recursos\b.jpg" alt="">
+                <img class="imagen-instalaciones" src="resources\intervalo recursos\c.jpg" alt="">
+                <img class="imagen-instalaciones" src="resources\intervalo recursos\d.jpg" alt="">
+                <img class="imagen-instalaciones" src="resources\intervalo recursos\e.jpg" alt="">
+                <img class="imagen-instalaciones" src="resources\intervalo recursos\f.jpg" alt="">
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -114,7 +118,6 @@
             </section>
         </div>
     </footer>
-    
 
     <script src="script.js"></script>
 </body>

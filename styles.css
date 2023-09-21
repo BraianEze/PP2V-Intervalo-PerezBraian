@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* Estilos para el encabezado */
+/*----------------- Estilos para el encabezado ------------------------*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -21,15 +21,12 @@
     background-color: #F8EE22;
     position: relative;
     border: none;
-    border-radius: 10px 10px 0 0;
 }
 
 .nav  .nav-header {
     width: 50%;
     display: inline;
 }
-
-
 
 .nav  .nav-btn {
     display: none;
@@ -38,6 +35,7 @@
 .nav  .nav-links {
     width: 50%;
     display: flex;
+    flex-direction: comlumn;
     justify-content: flex-end;
     column-gap: 5px;
     font-size: 18px;
@@ -92,12 +90,14 @@
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
-    height: 0px;
+    background-color: #F9EF23;
+    height: auto;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
+    top: 100px;
     left: 0px;
+    right: 0;
+    z-index: 1;
     }
     .nav  .nav-links  a {
     display: block;
@@ -122,10 +122,11 @@
 #inicio {
     position: relative;
     text-align: center;
-    width: 100%; 
+    width: 100%;
     padding: 0;
     margin: 0;
     overflow: hidden;
+    z-index: 0;
 }
 
 .inicio-content {
@@ -139,20 +140,42 @@
     object-fit: cover;
 }
 
-/* Estilos para el texto superpuesto */
-.texto-superpuesto {
+/* Estilos para el título superpuesto */
+/* Estilos para el título */
+.titulo-superpuesto {
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    color: white;
-    max-width: 80%;
-    font-size: 20px;
-    line-height: 1.4;
+    color: #FFF63D;
+    font-size: 25px;
 }
 
+.caja-titulo {
+    padding: 20px;
+}
+
+/* Estilos para el texto */
+.texto-superpuesto {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 100%;
+    font-size: 20px;
+}
+
+.caja-texto {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo del texto */
+    padding: 10px;
+}
+@media (max-width: 600px) {
+    .titulo-superpuesto {
+        font-size: 24px; /* Ajusta el tamaño del título para pantallas pequeñas */
+        top: 15%; /* Cambia la posición vertical para evitar la superposición */
+    }
+}
 /*------------------------- Estilos generales ---------------------*/
 body {
     font-family: Arial, sans-serif;

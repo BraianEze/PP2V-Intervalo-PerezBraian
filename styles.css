@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F8EE22;
+    background-color: #565557;
     position: relative;
     border: none;
 }
@@ -167,7 +167,7 @@
 }
 
 .caja-texto {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo del texto */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo del texto */
     padding: 10px;
 }
 @media (max-width: 600px) {
@@ -195,7 +195,7 @@ main {
 /* Estilos para las secciones */
 section {
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -230,7 +230,7 @@ section {
 
 /* Estilos para las imágenes de clases */
 .clase {
-    width: 40%;
+    width: 45%;
     margin: 10px;
     position: relative;
     overflow: hidden;
@@ -260,43 +260,88 @@ section {
     opacity: 1;
 }
 
-/* Estilos para el footer */
+/*------------------ Estilos para el footer -----------------------------------------*/
 footer {
     background-color: #FFF63D;
-    padding: 0;
+    padding: 0px;
+    margin: 0;
     display: flex;
+    box-sizing: border-box;
     justify-content: space-between;
     font-family: Arial, sans-serif;
     flex-wrap: wrap;
 }
 
-/* Estilos para las columnas en el footer */
-.footer-column {
-    flex: 1;
+/*------------------ Pie de Pagina ------------------*/
+.pie-pagina{
+    width: 100%;
+    background-color:#FFF63D;
 }
-
-/* Estilos para la lista de redes sociales */
-#redes-sociales ul {
-    list-style-type: none;
-    padding: 0;
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-#redes-sociales ul li {
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #040000;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #000000;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
     margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
 }
-
-#redes-sociales ul li:last-child {
-    margin-right: 0;
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #FFF63D;
 }
-
-#redes-sociales ul li a img {
-    width: 30px;
-    height: 30px;
-    border: none;
+.pie-pagina .grupo-2{
+    background-color: #474d53;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
 }
 
 /* Estilos para la tabla de horarios */
+h3 {
+    color: rgb(0, 0, 0);
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -304,12 +349,14 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
 }
 
 th, td {
     padding: 8px;
     text-align: left;
+    background-color: #e5e5e5;
+
 }
 
 /* Estilos para las filas impares de la tabla */

@@ -129,56 +129,53 @@
     z-index: 0;
 }
 
-.banner {
-	width: 100%;
-	height: 900px;
-	background-image: url("resources/intervalo recursos/1.jpg"); /* Reemplaza "tu-imagen-estatica.jpg" con la ruta de tu imagen estática */
-	background-size: cover;
-    background-position: center center; /* Centra la imagen tanto horizontal como verticalmente */
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.inicio-content {
+    position: relative;
 }
 
-.capa-banner {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.6);
+/* Estilos para la imagen de inicio */
+.inicio-content .inicio-image {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: cover;
 }
 
-.info-banner {
-	z-index: 1;
-	width: 100%;
-	max-width: 550px;
-	text-align: center;
+/* Estilos para el título superpuesto */
+/* Estilos para el título */
+.titulo-superpuesto {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF63D;
+    font-size: 25px;
 }
 
-.info-banner h1 {
-	color: #fff;
-	font-size: 45px;
-	margin-bottom: 20px;
-	letter-spacing: 1px;
+.caja-titulo {
+    padding: 20px;
 }
 
-.info-banner p {
-	color: #c7c7c7;
-	line-height: 1.7;
-	margin-bottom: 30px;
+/* Estilos para el texto */
+.texto-superpuesto {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 100%;
+    font-size: 20px;
 }
 
-.info-banner a {
-	color: #fff;
-	text-decoration: none;
-	background: #3088e0;
-	padding: 16px 37px;
-	display: inline-block;
-	border-radius: 50px;
+.caja-texto {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo del texto */
+    padding: 10px;
 }
-
+@media (max-width: 600px) {
+    .titulo-superpuesto {
+        font-size: 24px; /* Ajusta el tamaño del título para pantallas pequeñas */
+        top: 15%; /* Cambia la posición vertical para evitar la superposición */
+    }
+}
 /*------------------------- Estilos generales ---------------------*/
 body {
     font-family: Arial, sans-serif;

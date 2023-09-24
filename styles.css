@@ -12,14 +12,17 @@
     height: 80px;
 }
 .nav {
-    height: 100px;
+    height: 80px;
     width: 100%;
     padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #565557;
-    position: relative;
+    background-color: rgba(86, 85, 87, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     border: none;
 }
 
@@ -35,7 +38,6 @@
 .nav  .nav-links {
     width: 50%;
     display: flex;
-    flex-direction: comlumn;
     justify-content: flex-end;
     column-gap: 5px;
     font-size: 18px;
@@ -46,7 +48,7 @@
     display: inline-block;
     padding: 10px 10px;
     text-decoration: none;
-    color: #000000;
+    color: rgb(255, 255, 255);
 }
 
 .nav  .nav-links  a:hover {
@@ -90,7 +92,7 @@
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #F9EF23;
+    background-color: rgba(86, 85, 87, 0.9);
     height: auto;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -131,7 +133,7 @@
 
 .banner {
 	width: 100%;
-	height: 900px;
+	height: 850px;
 	background-image: url("resources/intervalo recursos/1.jpg"); /* Reemplaza "tu-imagen-estatica.jpg" con la ruta de tu imagen estática */
 	background-size: cover;
     background-position: center center; /* Centra la imagen tanto horizontal como verticalmente */
@@ -198,7 +200,7 @@ main {
 /* Estilos para las secciones */
 section {
     min-height: 100vh;
-    padding: 10px;
+    padding: 100px;
     text-align: center;
 }
 
@@ -263,106 +265,135 @@ section {
     opacity: 1;
 }
 
-/*------------------ Estilos para el footer -----------------------------------------*/
-footer {
-    background-color: #FFF63D;
-    padding: 0px;
-    margin: 0;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    font-family: Arial, sans-serif;
-    flex-wrap: wrap;
+/*------------------------------------ Estilos para el footer -------------------------------*/
+
+
+.footer-distributed{
+	background: rgba(86, 85, 87, 0.9);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
 }
 
-/*------------------ Pie de Pagina ------------------*/
-.pie-pagina{
-    width: 100%;
-    background-color:#FFF63D;
-}
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
-}
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
-    color: #040000;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: #000000;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #0d2033;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: #FFF63D;
-}
-.pie-pagina .grupo-2{
-    background-color: #474d53;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
-}
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
 }
 
-/* Estilos para la tabla de horarios */
-h3 {
-    color: rgb(0, 0, 0);
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+/* Footer izquierda */
+
+.footer-distributed .footer-left{
+	width: 40%;
 }
 
-table, th, td {
-    border: 1px solid #000000;
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    background-color: #e5e5e5;
+/* Footer Centro */
 
+.footer-distributed .footer-center{
+	width: 35%;
 }
 
-/* Estilos para las filas impares de la tabla */
-tr:nth-child(odd) {
-    background-color: #e5e5e5;
+.footer-distributed .footer-center i{
+	background-color:  #141414;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 15px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+    font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:20px;
+	line-height:2;
+}
+
+
+/* Footer Derecha */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
 }

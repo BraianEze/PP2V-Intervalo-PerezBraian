@@ -7,119 +7,102 @@
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .container{
     width: 100%;
     height: 80px;
 }
+/* ---- HEADER ---- */
 .nav {
-    height: 80px;
+    height: 85px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(86, 85, 87, 0.9);
+    background-color: rgba(91, 92, 95, 0.9); /* rgba(92, 99, 106, 0.885) */
+    backdrop-filter: blur(4.8px); /* Agrega un efecto difuminado en el fondo */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
 
-.nav  .nav-header {
-    width: 50%;
-    display: inline;
+.nav-title img {
+    height: 145px; /* Se adapta a diferentes tamaños de pantalla */
+    max-width: 150px;
 }
 
-.nav  .nav-btn {
-    display: none;
-}
-
-.nav  .nav-links {
-    width: 50%;
+/* Links de navegación */
+.nav-links {
     display: flex;
-    justify-content: flex-end;
-    column-gap: 5px;
-    font-size: 18px;
-    border: none;
+    gap: 20px;
 }
 
-.nav  .nav-links  a {
-    display: inline-block;
-    padding: 10px 10px;
+/*Estilos para titulos*/
+.nav-links a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+
 }
 
-.nav  .nav-links  a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+.nav-links a:hover {
     color: #F9EF23;
-
+    transform: scale(1.05);
 }
 
-.nav  #nav-check {
+/* Botón de menú para móviles */
+.nav-btn {
     display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
 
-@media (max-width:600px) {
-    .nav  .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:  rgba(85, 86, 89, 0.80);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        transition: height 0.3s ease-in-out;
     }
-    .nav  .nav-btn  label {
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    width: 50px;
-    height: 50px;
-    padding: 15px;
-    border: none;
+
+    .nav-links.active {
+        height: 200px;
+        padding: 20px 0;
     }
-    .nav  .nav-btn  label:hover,.nav  #nav-check:checked ~ .nav-btn  label {
-    background-color: rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    }
-    .nav  .nav-btn  label  span {
-    display: block;
-    width: 25px;
-    height: 5px;
-    background-color: #202020;
-    border-radius: 5px;
-    }
-    .nav  .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: rgba(86, 85, 87, 0.9);
-    height: auto;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 100px;
-    left: 0px;
-    right: 0;
-    z-index: 1;
-    }
-    .nav  .nav-links  a {
-    display: block;
-    width: 100%;
-    padding-left: 20px;
-    }
-    .nav  #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-    }
-    .nav  #nav-check:checked ~ .nav-links {
-    height: 250px;
-    overflow-y: hidden;
+
+    .nav-btn {
+        display: block;
     }
 }
+
 
 .attribute{
     position: absolute;
     bottom: 10px;
 }
+
+
 
 /*---------- Estilos para la sección de inicio -------------------*/
 #inicio {
@@ -202,6 +185,7 @@ main {
 section {
     min-height: 100vh;
     padding: 100px;
+    transition: opacity 0.5s ease-in-out;
     text-align: center;
 }
 
@@ -297,7 +281,7 @@ section {
 }
 
 .footer-distributed .footer-content {
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor padre */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra horizontalmente el contenido interno */

@@ -277,7 +277,7 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: subtleGradient 30s ease infinite; /* Animación muy suave */
-    margin: 40px 0;
+    margin: 25px 0;
 }
 
 @keyframes subtleGradient {
@@ -295,50 +295,83 @@ main {
     color: #ffffffb2; /* Color ajustado al tema de tu sitio, puedes cambiarlo */
 }
 
-/*----------------- Estilos para la sección de instalaciones -------------------*/
+/*----------------- Estilo Futurista con Glow y Efecto Blanco y Negro en Collage -------------------*/
 #instalaciones {
-    padding: 100px clamp(20px, 5vw, 50px);
-    transition: opacity 0.5s ease-in-out;
+    height: 100vh;
+    padding: 0;
     text-align: center;
-    background-color: #17171f;
-    position: relative;
+    background: linear-gradient(135deg, #121212, #1f1f1f);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+.section-title1{
+    font-size: 2rem; /* Tamaño impactante y elegante */
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: 'Poppins', sans-serif;;
+    background: linear-gradient(90deg, #FFD700, #FFFFFF,#FFF63D);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: subtleGradient 30s ease infinite; /* Animación muy suave */
+    margin: 25px 0;
+    margin-top: 120px;
+    scroll-margin-top: 85px;
 }
 
 .galeria-instalaciones {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 140px;
+    gap: 5px;
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
+    max-width: 100vw;
+    padding: 10px;
+    grid-template-areas:
+        "img1 img1 img2 img3"
+        "img4 img5 img2 img6"
+        "img4 img7 img8 img6"
+        "img4 img7 img8 img6";
 }
+
+.galeria-instalaciones .imagen-instalaciones:nth-child(1) { grid-area: img1; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(2) { grid-area: img2; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(3) { grid-area: img3; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(4) { grid-area: img4; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(5) { grid-area: img5; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(6) { grid-area: img6; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(7) { grid-area: img7; }
+.galeria-instalaciones .imagen-instalaciones:nth-child(8) { grid-area: img8; }
 
 .galeria-instalaciones .imagen-instalaciones {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.6s ease-out;
+    filter: grayscale(65%);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    border-radius: 3px;
 }
 
 .galeria-instalaciones .imagen-instalaciones:hover {
-    cursor: pointer;
-    opacity: 0.7;
-    transform: scale(1.05) rotate(-1.2deg);
-    filter: grayscale(0.9);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    filter: grayscale(0%);
 }
+
+
+
 
 /*----------------- Estilos para el footer -------------------*/
 .footer-distributed {
     background-image: radial-gradient(circle at center, #1d242a 0%, #1d242a 100%);
     width: 100%;
-    padding: 3.75rem clamp(1.25rem, 5vw, 3.125rem);
+    padding: 2.75rem clamp(1.25rem, 5vw, 9.125rem);
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -565,18 +598,9 @@ main {
         height: 40vh;
     }
 
-    .galeria-instalaciones .imagen-instalaciones {
-        height: 200px;
-    }
-
-    section {
-        padding: 75px clamp(15px, 4vw, 30px);
-    }
-}
-
 @media (max-width: 480px) {
     .footer-distributed .footer-left iframe {
-        height: 7.5rem; /* 120px */
+        height: 5.5rem; /* 120px */
         max-width: 100%;
     }
 
@@ -587,4 +611,5 @@ main {
     .footer-title {
         font-size: 20px;
     }
+}
 }
